@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   root 'students#home'
 
-  resources :students do
-    resources :courses do
-      resources :grades
-    end
+  resources :students
+
+  resources :courses do
+    resources :grades
   end
 end

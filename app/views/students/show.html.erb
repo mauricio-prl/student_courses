@@ -1,1 +1,10 @@
+<%= render 'shared/errors', obj: @student %>
+
 <h1 align='center'><%= @student.name %>'s page:</h1>
+
+<p>Email: <%= @student.email %></p>
+
+<%= link_to 'Edit student', edit_student_path(@student) %>
+
+<%= link_to 'Destroy Student', student_path(@student), method: :delete, 
+	data: { confirm: "Are you sure?" } %>
