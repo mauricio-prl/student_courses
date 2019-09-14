@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Course, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+	context 'create' do
+		let(:course) { create(:course) }
+
+		it { expect(course.name). to match(/(?<name>[A-Z]\w+)/) }
+		it {expect(course.duration).to eq('120h') }
+	end
 end
