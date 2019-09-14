@@ -25,10 +25,9 @@ ActiveRecord::Schema.define(version: 2019_09_14_012158) do
   create_table "grades", force: :cascade do |t|
     t.string "name"
     t.string "duration"
-    t.bigint "course_id"
+    t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_grades_on_course_id"
   end
 
   create_table "student_courses", force: :cascade do |t|
@@ -46,5 +45,4 @@ ActiveRecord::Schema.define(version: 2019_09_14_012158) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "grades", "courses"
 end
