@@ -7,6 +7,6 @@ class Student < ApplicationRecord
 		uniqueness: true,
 		format: {with: VALID_EMAIL_REGEX}
 
-	has_many :student_courses
+	has_many :student_courses, dependent: :destroy
   has_many :courses, through: :student_courses
 end

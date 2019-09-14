@@ -6,5 +6,12 @@
 
 <%= link_to 'Edit student', edit_student_path(@student) %>
 
+<h3><%= @student.name %>'s courses:</h3>
+<ul>
+	<% @student.courses.each do |course| %>
+		<li><%= course.name %>, duration: <%= course.duration %></li>
+	<% end %>
+</ul>
+
 <%= link_to 'Destroy Student', student_path(@student), method: :delete, 
 	data: { confirm: "Are you sure?" } %>
