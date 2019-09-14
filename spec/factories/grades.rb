@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :grade do
     name { Faker::Name.name }
-    duration { '120hours'}
+    time { '5 months'}
   end
 end
