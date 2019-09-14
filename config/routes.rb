@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   root 'students#home'
 
-  resources :students
-
+  resources :students do
+  	resources :student_courses, only: [:new, :create, :destroy]
+  end
   resources :courses do
     resources :grades
   end

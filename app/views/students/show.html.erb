@@ -13,5 +13,7 @@
 	<% end %>
 </ul>
 
+<%= link_to 'Add course', new_student_student_course_path(@student) %>
+
 <%= link_to 'Destroy Student', student_path(@student), method: :delete, 
 	data: { confirm: "Are you sure?" } %>

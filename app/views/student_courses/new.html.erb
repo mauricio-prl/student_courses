@@ -1,0 +1,10 @@
+<%= render 'shared/errors', obj: @student_course %>
+
+<h1>Add Course to: </h1>
+
+<%= form_for [@student, @student_course] do |f| %>
+	<!-- <%= f.select :student_id, Student.pluck(:name, :id) %> -->
+	<%= f.label :course_id %>
+	<%= f.text_field :course_id, placeholder: 'Course ID', autofocus: true %>
+	<%= f.submit 'Add course' %>
+<% end %>
