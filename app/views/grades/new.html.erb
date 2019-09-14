@@ -1,0 +1,11 @@
+<%= render 'shared/errors', obj: @grade %>
+
+<h1>Crete Grade:</h1>
+
+<%= form_for [@course, @grade], url: course_grades_path do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name, placeholder: 'Name', autofocus: true %>
+	<%= f.label :duration %>
+	<%= f.text_field :duration, placeholder: 'Duration' %>
+	<%= f.submit %>
+<% end %>

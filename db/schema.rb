@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_09_14_012158) do
 
   create_table "grades", force: :cascade do |t|
     t.string "name"
-    t.string "time"
+    t.string "duration"
     t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

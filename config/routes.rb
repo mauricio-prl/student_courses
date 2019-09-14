@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   	resources :student_courses, only: [:new, :create, :destroy]
   end
   resources :courses do
-    resources :grades
+    resources :grades, except: [:edit, :update, :index]
   end
 end

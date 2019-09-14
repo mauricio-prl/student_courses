@@ -4,6 +4,14 @@
 
 <h3>Duration:</h3> <p><%=@course.duration %></p>
 
+<h3>Grades:</h3>
+
+<%= link_to 'Create Grade', new_course_grade_path(@course) %>
+
+<% @course.grades.each do |grade| %>
+	<p><%= grade.name %>, duration: <%= grade.duration %></p>
+<% end %>
+
 <h3>Students:</h3>
 
 <% @course.students.each do |student| %>
