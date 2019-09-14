@@ -1,0 +1,15 @@
+<h1><%= @course.name %>'s details:</h1>
+
+<h3>Duration:</h3> <p><%=@course.duration %></p>
+
+<h3>Students:</h3>
+
+<% @course.students.each do |student| %>
+	<%= student.name %>
+<% end %><br>
+
+<%= link_to 'Edit course', edit_course_path(@course) %>
+<%= 
+	link_to 'Delete Course', course_path(@course), method: :delete, 
+	data: { confirm: "Are you sure?" } 
+%>

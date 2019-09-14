@@ -1,0 +1,7 @@
+<%= form_for @course do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name, placholder: 'Name', autofocus: true %>
+	<%= f.label :duration %>
+	<%= f.text_field :duration, placholder: 'Duration' %>
+	<%= f.submit %>
+<% end %> 
